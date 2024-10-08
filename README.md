@@ -1,6 +1,6 @@
 # comp-359-assignment-2
 
-- TODO
+## TO-DO
 
 - [ ] GUI Setup
 - [ ] Matplotlib plots and graph setup
