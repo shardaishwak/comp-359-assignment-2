@@ -31,6 +31,35 @@
 
 All the finds go here.
 
+### Requirements
+
+### Planning
+
+- Readme file: dividing the tasks, requirements, rubric and general progress of each user.
+- Github: for keeping track of the code files, versioning, branching and issues.
+  - Java Repository: https://github.com/shardaishwak/comp-359-assignment-1-java
+  - Typescript Respository: https://github.com/shardaishwak/comp-359-assignment-1
+- Github Board -We primary used Roadmap Check it out at: [https://github.com/users/shardaishwak/projects/1/views/4](https://github.com/users/shardaishwak/projects/1/views/4)
+
+### Submission model
+
+- Powerpoint presentation: describing briefly all the algorithms, space and time complexity, research involved and the specialty.
+
+### Source:
+
+- AC-3: http://redwood.cs.ttu.edu/~yuazhang/publications/ac3-1-ijcai01.pdf
+- https://en.wikipedia.org/wiki/AC-3_algorithm
+- https://medium.com/swlh/how-to-solve-constraint-satisfaction-problems-csps-with-ac-3-algorithm-in-python-f7a9be538cfe
+- https://people.eecs.berkeley.edu/~russell/classes/cs188/f05/slides/chapter05-6pp.pdf
+
+### Technologies required
+
+- Python
+
+---
+
+## Algorithms
+
 ### AC-3 (Arc Consistency Algorithm 3)
 
 The AC-3 algorithm ensures arc consistency between variables in a **Constraint Satisfaction Problem (CSP)**. In a CSP, each variable has a domain of values, and constraints exist between variables. AC-3 operates by eliminating values from the domains that do not satisfy constraints.
@@ -93,35 +122,6 @@ Given a pair of nodes \(X_i\) and \(X_j\), the algorithm ensures that for each c
 \]
 
 This constraint enforcement speeds up the graph coloring process by reducing the possibility of conflicts before backtracking occurs.
-
-### Requirements
-
-### Planning
-
-- Readme file: dividing the tasks, requirements, rubric and general progress of each user.
-- Github: for keeping track of the code files, versioning, branching and issues.
-  - Java Repository: https://github.com/shardaishwak/comp-359-assignment-1-java
-  - Typescript Respository: https://github.com/shardaishwak/comp-359-assignment-1
-- Github Board -We primary used Roadmap Check it out at: [https://github.com/users/shardaishwak/projects/1/views/4](https://github.com/users/shardaishwak/projects/1/views/4)
-
-### Submission model
-
-- Powerpoint presentation: describing briefly all the algorithms, space and time complexity, research involved and the specialty.
-
-### Source:
-
-- AC-3: http://redwood.cs.ttu.edu/~yuazhang/publications/ac3-1-ijcai01.pdf
-- https://en.wikipedia.org/wiki/AC-3_algorithm
-- https://medium.com/swlh/how-to-solve-constraint-satisfaction-problems-csps-with-ac-3-algorithm-in-python-f7a9be538cfe
-- https://people.eecs.berkeley.edu/~russell/classes/cs188/f05/slides/chapter05-6pp.pdf
-
-### Technologies required
-
-- Python
-
----
-
-## Algorithms
 
 ---
 
