@@ -6,6 +6,7 @@ MAX_COLORS = 5
 selected_colors = []
 
 def choose_color(color_display_frame, next_button):
+    """Choose a color."""
     if len(selected_colors) >= MAX_COLORS:
         messagebox.showinfo("Limit Reached", f"You can only select up to {MAX_COLORS} colors.")
         return
@@ -24,6 +25,7 @@ def choose_color(color_display_frame, next_button):
         next_button.config(state="normal")
 
 def display_selected_colors(color_display_frame):
+    """Display the selected colors."""
     for widget in color_display_frame.winfo_children():
         widget.destroy()
 
@@ -32,6 +34,7 @@ def display_selected_colors(color_display_frame):
         color_label.grid(row=i // 3, column=i % 3, padx=10, pady=10)
 
 def show_color_picker(root):
+    """Show the color picker."""
     color_frame = tk.Frame(root)
     color_frame.pack(fill="both", expand=True)
 
@@ -45,6 +48,7 @@ def show_color_picker(root):
     next_button.pack(pady=20)
 
 def show_next_step(root, color_frame):
+    """Show the next step."""
     show_frame(color_frame, hide=True) 
     result_frame = tk.Frame(root)
     result_frame.pack(fill="both", expand=True)

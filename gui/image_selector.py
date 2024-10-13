@@ -4,11 +4,13 @@ from color_picker import show_color_picker
 from gui_utils import show_frame
 
 def on_select_image(root, image_frame, option: int):
+    """Handle the selection of an image."""
     print(f"Selected option: {option}")
     show_frame(image_frame, hide=True)
     show_color_picker(root)
 
 def show_image_page(root, welcome_frame):
+    """Show the image page."""
     show_frame(welcome_frame, hide=True) 
 
     image_frame = tk.Frame(root)

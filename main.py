@@ -3,6 +3,7 @@ from image_selector import show_image_page
 from gui_utils import create_welcome_frame, show_frame
 
 def run():
+    """Run the application."""
     root = tk.Tk()
     root.title("Image and Color Picker")
     root.geometry("600x600") 
