@@ -6,7 +6,7 @@
 - [ ] Matplotlib plots and graph setup
 - [x] Research AC-3 arc-constraint algorithm
 - [x] Implement AC-3 algorithm for checking
-- [ ] Load GeoJSON data from various countries
+- [x] Load GeoJSON data from various countries
 - [ ] Load Neighbour and states JSON data
 
 # Assignment 1
