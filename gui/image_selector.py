@@ -4,11 +4,12 @@ from gui.utils import show_frame
 from Country import CountryEnum, Country
 
 
-def on_select_image(root, image_frame, option: Country):
+# selected_country is passed down 3 functions, might be better to make it global?
+def on_select_image(root, image_frame, selected_country: Country):
     """Handle the selection of an image."""
-    print(f"Selected option: {option.name}")
+    print(f"Selected option: {selected_country.name}")
     show_frame(image_frame, hide=True)
-    show_color_picker(root, option)
+    show_color_picker(root, selected_country)
 
 
 def show_image_page(root, welcome_frame):
