@@ -1,14 +1,15 @@
 import tkinter as tk
-from PIL import ImageTk, Image
 from gui.color_picker import show_color_picker
 from gui.utils import show_frame
+from Country import CountryEnum, Country
 
 
-def on_select_image(root, image_frame, option: int):
+# selected_country is passed down 3 functions, might be better to make it global?
+def on_select_image(root, image_frame, selected_country: Country):
     """Handle the selection of an image."""
-    print(f"Selected option: {option}")
+    print(f"Selected option: {selected_country.name}")
     show_frame(image_frame, hide=True)
-    show_color_picker(root)
+    show_color_picker(root, selected_country)
 
 
 def show_image_page(root, welcome_frame):
@@ -18,32 +19,18 @@ def show_image_page(root, welcome_frame):
     image_frame = tk.Frame(root)
     image_frame.pack(fill="both", expand=True)
 
-    image_paths = [
-        "image.png",
-        "image.png",
-        "image.png",
-        "image.png",
-        "image.png",
-        "image.png",
-    ]
+    countryFactory = Country()
 
-    image_objects = []
-    for path in image_paths:
-        img = Image.open(path)
-        img = img.resize((150, 150))
-        photo = ImageTk.PhotoImage(img)
-        image_objects.append(photo)
-
-    for i, image in enumerate(image_objects):
+    for i, countryEnum in enumerate(CountryEnum):
+        country: Country = countryFactory.build(countryEnum)
         row = i // 3 * 2
         col = i % 3
 
-        image_label = tk.Label(image_frame, image=image)
+        image_label = tk.Label(image_frame, image=country.image)
         image_label.grid(row=row, column=col, padx=10, pady=5)
-
         button = tk.Button(
             image_frame,
-            text=f"Button {i+1}",
-            command=lambda i=i: on_select_image(root, image_frame, i + 1),
+            text=country.name,
+            command=lambda i=i: on_select_image(root, image_frame, country),
         )
         button.grid(row=row + 1, column=col, pady=5)
