@@ -121,7 +121,7 @@ countries = {
     },
     CountryEnum.FRANCE: {
         "image_path": "./image.png",
-        "states ": {
+        "states": {
             "Hauts-de-France": None,
             "Normandie": None,
             "Île-de-France": None,

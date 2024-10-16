@@ -4,7 +4,7 @@ from algorithm import AC3MRVLCVMapSolver
 from gui.utils import show_frame
 
 MAX_COLORS = 4
-selected_colors = []
+selected_colors = set()
 
 
 def choose_color(color_display_frame, next_button):
@@ -18,7 +18,7 @@ def choose_color(color_display_frame, next_button):
     color = colorchooser.askcolor(title="Choose a color")[1]
     if color:
         if color not in selected_colors:
-            selected_colors.append(color)
+            selected_colors.add(color)
             display_selected_colors(color_display_frame)
         else:
             messagebox.showwarning(
