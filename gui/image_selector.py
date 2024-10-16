@@ -1,7 +1,7 @@
 import tkinter as tk
 from gui.color_picker import show_color_picker
 from gui.utils import show_frame
-from Country import CountryEnum, Country
+from Country import CountryEnum, Country, CountryFactory
 
 
 # selected_country is passed down 3 functions, might be better to make it global?
@@ -19,10 +19,13 @@ def show_image_page(root, welcome_frame):
     image_frame = tk.Frame(root)
     image_frame.pack(fill="both", expand=True)
 
-    countryFactory = Country()
+    countryFactory = CountryFactory()
 
     for i, countryEnum in enumerate(CountryEnum):
         country: Country = countryFactory.build(countryEnum)
+
+        print(country.name)
+
         row = i // 3 * 2
         col = i % 3
 
@@ -31,6 +34,6 @@ def show_image_page(root, welcome_frame):
         button = tk.Button(
             image_frame,
             text=country.name,
-            command=lambda i=i: on_select_image(root, image_frame, country),
+            command=lambda c=country: on_select_image(root, image_frame, c),
         )
         button.grid(row=row + 1, column=col, pady=5)
