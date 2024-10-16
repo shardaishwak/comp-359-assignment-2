@@ -15,6 +15,8 @@ def show_image_page(root, welcome_frame):
     """Show the image page."""
     show_frame(welcome_frame, hide=True)
 
+    # TODO: build buttons by looping over Country enum and CountryBuilder information
+
     image_frame = tk.Frame(root)
     image_frame.pack(fill="both", expand=True)
 
