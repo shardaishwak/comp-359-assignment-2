@@ -2,11 +2,47 @@ from enum import Enum
 from PIL import ImageTk, Image
 
 
+class CountryEnum(Enum):
+    GERMANY = "Germany"
+    FRANCE = "France"
+    RWANDA = "Rwanda"
+
+
+# Factory/builder?? Either way, makes it easier to add countries
+class Country:
+    def build(self, country: CountryEnum):
+        self.country = country
+        self.name = country.value
+
+        if country == CountryEnum.GERMANY:
+            self.states = GERMANY.states
+            self.neighbors = GERMANY.neighbors
+            self.__init_image(GERMANY.image_path.value)
+
+        elif country == CountryEnum.FRANCE:
+            self.states = FRANCE.states
+            self.neighbors = FRANCE.neighbors
+            self.__init_image(FRANCE.image_path.value)
+
+        elif country == CountryEnum.RWANDA:
+            self.states = RWANDA.states
+            self.neighbors = RWANDA.neighbors
+            self.__init_image(RWANDA.image_path.value)
+
+        return self
+
+    def __init_image(self, image_path):
+        img = Image.open(image_path)
+        img = img.resize((150, 150))
+        photo = ImageTk.PhotoImage(img)
+        self.image = photo
+
+
 # TODO: ADD IMAGE PATHS TO COUNTRIES
 
 
 class GERMANY(Enum):
-    image_path = ""
+    image_path = "./image.png"
     states = {
         "Schleswig-Holstein": None,
         "Hamburg": None,
@@ -87,7 +123,7 @@ class GERMANY(Enum):
 
 
 class FRANCE(Enum):
-    image_path = ""
+    image_path = "./image.png"
     states = {
         "Hauts-de-France": None,
         "Normandie": None,
@@ -169,7 +205,7 @@ class FRANCE(Enum):
 
 
 class RWANDA(Enum):
-    image_path = ""
+    image_path = "./image.png"
     neighbors = {
         "Kigali City": [
             "Northern Province, Rwanda",
@@ -205,44 +241,3 @@ class RWANDA(Enum):
         "Southern Province, Rwanda": None,
         "Northern Province, Rwanda": None,
     }  # Rwandan states dictionary
-
-
-class Country(Enum):
-    GERMANY = "Germany"
-    FRANCE = "France"
-    RWANDA = "Rwanda"
-
-
-class CountryFactory:
-    name = ""
-    image_object = None
-    country = None
-    states = {}
-    neighbors = {}
-
-    def build(self, country: Country):
-        self.country = country
-        self.name = country.value
-
-        if country == Country.GERMANY:
-            self.states = GERMANY.states
-            self.neighbors = GERMANY.neighbors
-            self.__init_image(GERMANY.image_path)
-
-        elif country == Country.FRANCE:
-            self.states = FRANCE.states
-            self.neighbors = FRANCE.neighbors
-            self.__init_image(FRANCE.image_path)
-
-        elif country == Country.RWANDA:
-            self.states = RWANDA.states
-            self.neighbors = RWANDA.neighbors
-            self.__init_image(RWANDA.image_path)
-
-        return self
-
-    def __init_image(self, image_path):
-        img = Image.open(image_path)
-        img = img.resize((150, 150))
-        photo = ImageTk.PhotoImage(img)
-        self.image_object = photo
