@@ -15,18 +15,18 @@ class Country:
         self.name = country.value
 
         if country == CountryEnum.GERMANY:
-            self.states = GERMANY.states
-            self.neighbors = GERMANY.neighbors
+            self.states = GERMANY.states.value
+            self.neighbors = GERMANY.neighbors.value
             self.__init_image(GERMANY.image_path.value)
 
         elif country == CountryEnum.FRANCE:
-            self.states = FRANCE.states
-            self.neighbors = FRANCE.neighbors
+            self.states = FRANCE.states.value
+            self.neighbors = FRANCE.neighbors.value
             self.__init_image(FRANCE.image_path.value)
 
         elif country == CountryEnum.RWANDA:
-            self.states = RWANDA.states
-            self.neighbors = RWANDA.neighbors
+            self.states = RWANDA.states.value
+            self.neighbors = RWANDA.neighbors.value
             self.__init_image(RWANDA.image_path.value)
 
         return self

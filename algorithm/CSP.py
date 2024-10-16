@@ -1,7 +1,13 @@
 from typing import List, Dict, Set, Any
 
+
 class CSP:
-    def __init__(self, variables: List[str] = None, adjList: Dict[str, List[str]] = None, domains: Dict[str, Set[Any]] = None):
+    def __init__(
+        self,
+        variables: List[str] = None,
+        adjList: Dict[str, List[str]] = None,
+        domains: Dict[str, Set[Any]] = None,
+    ):
         self.variables = variables if variables is not None else []
         self.adjList = adjList if adjList is not None else {}
         self.domains = domains if domains is not None else {}

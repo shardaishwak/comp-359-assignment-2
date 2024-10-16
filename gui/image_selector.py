@@ -3,16 +3,12 @@ from gui.color_picker import show_color_picker
 from gui.utils import show_frame
 from Country import CountryEnum, Country
 
-selected_country = {}
-
 
 def on_select_image(root, image_frame, option: Country):
-    global selected_country
-    selected_country = option
     """Handle the selection of an image."""
     print(f"Selected option: {option.name}")
     show_frame(image_frame, hide=True)
-    show_color_picker(root)
+    show_color_picker(root, option)
 
 
 def show_image_page(root, welcome_frame):
