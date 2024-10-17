@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import colorchooser, messagebox
-from gui_utils import show_frame
+from gui.utils import show_frame
 
 MAX_COLORS = 5
 selected_colors = []

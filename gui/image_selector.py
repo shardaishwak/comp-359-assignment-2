@@ -1,7 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk, Image
-from color_picker import show_color_picker
-from gui_utils import show_frame
+from gui.color_picker import show_color_picker
+from gui.utils import show_frame
 
 def on_select_image(root, image_frame, option: int):
     """Handle the selection of an image."""
