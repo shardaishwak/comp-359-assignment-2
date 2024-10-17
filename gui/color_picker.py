@@ -85,6 +85,7 @@ def show_next_step(root, color_frame, selected_country):
 
     # close the window
     root.destroy()
+    
 
     # result_label = tk.Label(
     #     result_frame, text="[render the algorithm here]", font=("Helvetica", 20)
