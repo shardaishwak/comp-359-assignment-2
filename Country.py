@@ -40,7 +40,7 @@ class Country:
 
 countries = {
     CountryEnum.GERMANY: {
-        "image_path": "./image.png",
+        "image_path": "./images/germany.png",
         "states": {
             "Schleswig-Holstein": None,
             "Hamburg": None,
@@ -120,7 +120,7 @@ countries = {
         },  # German neighbors dictionary
     },
     CountryEnum.FRANCE: {
-        "image_path": "./image.png",
+        "image_path": "./images/france.png",
         "states": {
             "Hauts-de-France": None,
             "Normandie": None,
@@ -201,7 +201,7 @@ countries = {
         },
     },
     CountryEnum.RWANDA: {
-        "image_path": "./image.png",
+        "image_path":"./images/rwanda.jpg",
         "neighbors": {
             "Kigali City": [
                 "Northern Province, Rwanda",
