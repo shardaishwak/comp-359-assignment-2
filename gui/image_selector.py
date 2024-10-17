@@ -1,4 +1,5 @@
 import tkinter as tk
+from PIL import ImageTk, Image
 from gui.color_picker import show_color_picker
 from gui.utils import show_frame
 from Country import CountryEnum, Country, CountryFactory

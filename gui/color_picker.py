@@ -6,7 +6,6 @@ from gui.utils import show_frame
 MAX_COLORS = 4
 selected_colors = set()
 
-
 def choose_color(color_display_frame, next_button):
     """Choose a color."""
     if len(selected_colors) >= MAX_COLORS:
