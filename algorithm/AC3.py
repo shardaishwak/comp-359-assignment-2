@@ -1,6 +1,6 @@
 from collections import defaultdict
 from typing import List, Tuple, Dict, Set, Any
-from CSP import CSP
+from algorithm.CSP import CSP
 
 
 def AC3(

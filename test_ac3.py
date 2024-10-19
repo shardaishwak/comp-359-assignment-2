@@ -43,6 +43,7 @@ class TestAC3Algorithm(unittest.TestCase):
         """Test if inconsistent values are correctly removed by remove_inconsistent_values."""
         removals = defaultdict(set)
         revise_result = remove_inconsistent_values(self.csp, 'A', 'B', removals)
+
         self.assertTrue(revise_result)
         self.assertNotIn(1, self.csp.domains['A'])
         self.assertIn(2, self.csp.domains['A'])
