@@ -47,6 +47,7 @@
 - https://en.wikipedia.org/wiki/AC-3_algorithm
 - https://medium.com/swlh/how-to-solve-constraint-satisfaction-problems-csps-with-ac-3-algorithm-in-python-f7a9be538cfe
 - https://people.eecs.berkeley.edu/~russell/classes/cs188/f05/slides/chapter05-6pp.pdf
+- https://chatgpt.com/share/67131118-07a8-800c-acd4-fd6b5ef475fa (wanted to integrate images in the canvas)
 
 ### Technologies required
 
