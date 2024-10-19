@@ -21,8 +21,6 @@
 <img width="712" alt="Screenshot 2024-10-18 at 9 15 27 PM" src="https://github.com/user-attachments/assets/9f3cb27a-b60b-4a34-b2c3-eca8cb5834ca">
 <img width="1112" alt="Screenshot 2024-10-18 at 9 15 34 PM" src="https://github.com/user-attachments/assets/474387c0-7cd9-41af-b47d-954c515910b3">
 
-
-
 ### Members
 
 - Ishwak Sharda (300205473 - ishwak.sharda@student.ufv.ca)
@@ -135,7 +133,7 @@ This constraint enforcement speeds up the graph coloring process by reducing the
 
 ### Test suitcase
 
-To ensure that our implementations of the algorithms are correct, we can develop a test suitcase to run on each algorithm. This suitcase makes sure that all the algorithms do sort accordingly given some input.
+To ensure that our implementations of the algorithms are correct, we can develop a test suitcase to run on Ac-3 and CSP algorithms.
 
 ---
 
