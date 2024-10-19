@@ -15,6 +15,14 @@
 
 **Implement a naive graph colouring algorithm (does not need to find the minimal number of colours) program with a GUI to visualize the colouring(s)**
 
+<img width="712" alt="Screenshot 2024-10-18 at 9 15 06 PM" src="https://github.com/user-attachments/assets/c5e285a6-4196-46c8-9c86-a44f61e546f6">
+<img width="712" alt="Screenshot 2024-10-18 at 9 15 11 PM" src="https://github.com/user-attachments/assets/9e067e0f-2b79-417d-81bf-8e1f9719b885">
+<img width="712" alt="Screenshot 2024-10-18 at 9 15 15 PM" src="https://github.com/user-attachments/assets/3b18bda8-3346-4ea6-bb65-2b73b4f5b9db">
+<img width="712" alt="Screenshot 2024-10-18 at 9 15 27 PM" src="https://github.com/user-attachments/assets/9f3cb27a-b60b-4a34-b2c3-eca8cb5834ca">
+<img width="1112" alt="Screenshot 2024-10-18 at 9 15 34 PM" src="https://github.com/user-attachments/assets/474387c0-7cd9-41af-b47d-954c515910b3">
+
+
+
 ### Members
 
 - Ishwak Sharda (300205473 - ishwak.sharda@student.ufv.ca)
