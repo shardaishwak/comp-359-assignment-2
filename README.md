@@ -3,11 +3,11 @@
 ## TO-DO
 
 - [x] GUI Setup
-- [ ] Matplotlib plots and graph setup
+- [x] Matplotlib plots and graph setup
 - [x] Research AC-3 arc-constraint algorithm
 - [x] Implement AC-3 algorithm for checking
 - [x] Load GeoJSON data from various countries
-- [ ] Load Neighbour and states JSON data
+- [x] Load Neighbour and states JSON data
 
 # Assignment 1
 
@@ -26,10 +26,6 @@
 - Python (GUI): https://github.com/shardaishwak/comp-359-assignment-2
 
 ---
-
-## Research
-
-All the finds go here.
 
 ### Requirements
 
@@ -55,6 +51,9 @@ All the finds go here.
 ### Technologies required
 
 - Python
+- AC3
+- Recursion (backtracking)
+- KTinker
 
 ---
 
