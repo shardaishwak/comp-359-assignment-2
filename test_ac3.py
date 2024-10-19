@@ -27,9 +27,9 @@ class TestAC3Algorithm(unittest.TestCase):
         queue = makeArcQueue(self.csp)
         result = AC3(self.csp, queue)
         self.assertTrue(result)
-        self.assertIn(1, self.csp.domains['A'])
-        self.assertNotIn(1, self.csp.domains['B']) 
-        self.assertIn(3, self.csp.domains['C'])
+        self.assertEqual(self.csp.domains['A'], {1, 2, 3})
+        self.assertEqual(self.csp.domains['B'], {1, 2})
+        self.assertEqual(self.csp.domains['C'], {2, 3})
 
     def test_ac3_failure(self):
         """Test if AC3 fails when a domain becomes empty."""
@@ -40,13 +40,11 @@ class TestAC3Algorithm(unittest.TestCase):
         self.assertFalse(result) 
 
     def test_remove_inconsistent_values(self):
-        """Test if inconsistent values are correctly removed by remove_inconsistent_values."""
+        """Test the remove_inconsistent_values function directly."""
         removals = defaultdict(set)
-        revise_result = remove_inconsistent_values(self.csp, 'A', 'B', removals)
-
-        self.assertTrue(revise_result)
-        self.assertNotIn(1, self.csp.domains['A'])
-        self.assertIn(2, self.csp.domains['A'])
+        revised = remove_inconsistent_values(self.csp, 'A', 'B', removals)
+        self.assertFalse(revised)
+        self.assertEqual(self.csp.domains['A'], {1, 2, 3})
 
     def test_makeArcQueue(self):
         """Test if the arc queue is correctly generated."""
@@ -61,5 +59,13 @@ class TestAC3Algorithm(unittest.TestCase):
         self.csp.restore_domains(removals)
         self.assertIn(1, self.csp.domains['A']) 
 
+    def test_ac3_value_removal(self):
+        """Test if AC3 removes inconsistent values when appropriate."""
+        self.csp.domains['A'] = {1, 2}
+        self.csp.domains['B'] = {1}
+        queue = makeArcQueue(self.csp)
+        result = AC3(self.csp, queue)
+        self.assertTrue(result)
+        self.assertEqual(self.csp.domains['A'], {2})
 if __name__ == '__main__':
     unittest.main()
