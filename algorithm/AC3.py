@@ -10,6 +10,9 @@ def AC3(
     if removals is None:
         removals = defaultdict(set)
 
+    if queue is None:
+        queue = makeArcQueue(csp)
+
     while queue:
         # Pop an arc (variable, neighbor)
         Xt, Xh = queue.pop()
@@ -27,16 +30,16 @@ def AC3(
 
 
 def remove_inconsistent_values(
-    csp: CSP, Xt: str, Xh: str, removals: Dict[str, Set[Any]]
+    csp: CSP, Xi: str, Xj: str, removals: Dict[str, Set[Any]]
 ) -> bool:
     """Remove inconsistent values from the domain of Xt."""
     revised = False
 
-    for x in csp.domains[Xt].copy():
+    for x in csp.domains[Xi].copy():
         # Check if there's any value in Xh's domain that does not conflict with x
-        if all(csp.conflicts(Xt, x, Xh, y) for y in csp.domains[Xh]):
-            csp.domains[Xt].remove(x)
-            removals[Xt].add(x)
+        if not any(csp.is_consistent(Xi, x, Xj, y) for y in csp.domains[Xj]):
+            csp.domains[Xi].remove(x)
+            removals[Xi].add(x)
             revised = True
 
     return revised
