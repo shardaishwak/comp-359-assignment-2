@@ -5,11 +5,11 @@ from Country import CountryEnum
 
 
 def ColorCountry(country_choice, states_colors):
-    if country_choice == CountryEnum.GERMANY:
+    if country_choice == CountryEnum.GERMANY.value:
         country_states = gpd.read_file("path_to_german_states_geojson.json")
-    elif country_choice == CountryEnum.FRANCE:
+    elif country_choice == CountryEnum.FRANCE.value:
         country_states = gpd.read_file("path_to_france_states_geojson.json")
-    elif country_choice == CountryEnum.RWANDA:
+    elif country_choice == CountryEnum.RWANDA.value:
         country_states = gpd.read_file("path_to_rwanda_states_geojson.json")
 
     # Prepare the figure and axis
