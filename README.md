@@ -30,6 +30,8 @@
 ### Source code
 
 - Python (GUI): https://github.com/shardaishwak/comp-359-assignment-2
+- Algorithm Analysis: [Analysis.pdf](https://github.com/user-attachments/files/17470828/Maths.from.Overleaf.pdf)
+
 
 ---
 
