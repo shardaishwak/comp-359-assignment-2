@@ -39,9 +39,8 @@
 
 - Readme file: dividing the tasks, requirements, rubric and general progress of each user.
 - Github: for keeping track of the code files, versioning, branching and issues.
-  - Java Repository: https://github.com/shardaishwak/comp-359-assignment-1-java
-  - Typescript Respository: https://github.com/shardaishwak/comp-359-assignment-1
-- Github Board -We primary used Roadmap Check it out at: [https://github.com/users/shardaishwak/projects/1/views/4](https://github.com/users/shardaishwak/projects/1/views/4)
+  - Main Respository: https://github.com/shardaishwak/comp-359-assignment-2
+- Github Board -We primary used Roadmap Check it out at: [https://github.com/users/shardaishwak/projects/2/views/4](https://github.com/users/shardaishwak/projects/2/views/4)
 
 ### Submission model
 
